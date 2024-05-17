@@ -1,114 +1,87 @@
+                              // OBJECT ASSIGNMENTS //
+                            // PART 1: Employee Data //
 
-//  1) Miles to Kilometer converter(Operators): //
+type Employee={
+    name:string,
+    Department:string,
+    Role:"Manager"|"Engineer"|"Intern",
+    contact?:{
+        phone?:number,
+        emailInfo:string,
+    },
+    skills?:string[],
+}     
+let employee:Employee={
+    name:"Emily smith",
+    Department:"Marketing",
+    Role:"Manager",
+    contact:{
+        emailInfo:"emilysmith@gmail.com"
+    },
+    skills:["Marketing strategy","Content creation","Social media management"], 
+};
+console.log(employee);
 
-let miles = 12; // (in miles) //
-let kilometeres = miles*1.60934;
-console.log(`The distance of ${miles} miles is equal to ${kilometeres} kilometers`)
+                            // PART 2: Car Details //
 
-// 2) Evaluating a number //
-import inquirer from "inquirer";
-
-let user = await inquirer.prompt([
-    {
-        name:"input",
-        type:"number",
-        message:"Enter a number:",
+type car={
+    engine:{
+        horsepower:number
     }
-]);
-let number = Math.floor(Math.random()*100);
-if(user.input === number){
-    console.log(`${user.input} is equal to ${number}`)
+    getHorsepower:() =>void,
 }
-else if(user.input > number){
-    console.log(`${user.input} is greater than ${number}`)
+let Car:car={
+    engine:{
+        horsepower:789,
+    },
+    getHorsepower:function(){
+        console.log((Object.values(Car.engine).join('')))
+    },
 }
-else{
-    console.log(`${user.input} is less than ${number}`)
-}
+Car.getHorsepower();
+console.log(Car);
 
-// 3) Friend checker game //
+                             // PART 3: Colorful T-Shirt //
 
-let User = await inquirer.prompt([
-    {
-        name:"name",
-        type:"input",
-        message:"Enter your Name:",
+type product={
+    name:string,
+    price:number,
+    color:string,
+    inventory:{
+        stock:number,
+        colorOptions?:string[],
+        changecolor:(newcolor:string)=>void
     }
-]);
-switch(User.name.toLowerCase()){
-    default:{
-        console.log(`Hey,${User.name.toLowerCase()} you dont seem to be one of my friends...`)
-        break;
-    };
-    case 'mustafa':{
-        console.log(`${User.name.toLowerCase()},You're my friend!`)
-        break;
-    };
-    case 'ammara':{
-        console.log(`${User.name.toLowerCase()},You're my friend!`)
-        break;
-    };
-    case 'bismah':{
-        console.log(`${User.name.toLowerCase()},You're my Bestfriend!`)
-        break;
-    };
-    case 'iqra':{
-        console.log(`${User.name.toLowerCase()},You're my friend!`)
-        break;
-    };
+}    
+let Product:product={
+    name:'T-Shirts',
+    price:3000,
+    color:"Red",
+    inventory:{
+        stock:15,
+        colorOptions:["red","black","white","green",'yellow'],
+        changecolor:(color)=>{
+            let newcolor=color.toLowerCase();
+            if(newcolor==="black"){
+                Product.price=Product.price+(Product.price*15/100);
+                Product.color=newcolor;
+            }else if(newcolor==="white"){
+                Product.price=Product.price+(Product.price*10/100);
+                Product.color=newcolor;
+            }else if(newcolor==="green"){
+                Product.price=Product.price-(Product.price*5/100);
+                Product.color=newcolor;
+            }else if(newcolor==="yellow"){
+                Product.price=Product.price+(Product.price*5/100);
+                Product.color=newcolor;
+            }else if(newcolor==="red"){
+            }else{
+                console.log(`Please Enter a color from the given choices:\n${Product.inventory.colorOptions}`)
+            }
+        }
+}                          
 }
+Product.inventory.changecolor('YellOW');
+console.log(Product.color,Product.price)
 
-// 4) Functions //
-
-let num1= 5
-let num2 = 4
-
-// Calling this function the first time //
-
-function multiplyNumbers(num:number,Num:number){
-    return num*Num;
-}
-console.log(multiplyNumbers(num1,num2));
-
-// Calling this function the second time using two more numbers //
-
-let num3= 2
-let num4= 4
-
-console.log(multiplyNumbers(num3,num4))
-
-// 5) Calculator project using function: //
-
-let numval1 :number = 4
-let numval2 :number = 8
-let operation ="*";
-function Calculator(numval1:number,numval2:number,operation:string){
-    if(operation === "-"){
-     return numval1-numval2;
-    }
-    else if(operation === "+"){
-        return numval1+numval2
-    }else if(operation === "/"){
-        return numval1/numval2
-    }else if(operation === "*"){
-        return numval1*numval2
-    }
-}
-console.log(Calculator(numval1,numval2,operation))
-
-operation = "-";
-console.log(Calculator(numval1,numval2,operation))
-
- // 6) Anonymous functions:
-
-let  variable = function(argument:string){
-    console.log(argument);
-}
-variable("hello world");
-
-function print(arg:string){
-    console.log(arg);
-}
-print("HELLO WORLD :D");
-
-                                // THE END  :D //
+                              // THE END :D //
