@@ -1,56 +1,31 @@
-                                                    
-                                         //✧˖°🌷📎⋆ ˚｡⋆୨୧˚ Assisnments of Array ˚୨୧⋆｡˚⋆📎🌷°˖✧//
-
- // Question 1: //
-
+//✧˖°🌷📎⋆ ˚｡⋆୨୧˚ Assisnments of Array ˚୨୧⋆｡˚⋆📎🌷°˖✧//
+export {};
+// Question 1: //
 //  let fruits:string[]=["apple","banana","mango","orange"];
-
- // question 2: //
-
+// question 2: //
 //  let numbers:number[]=[10,20,30,40];
-
 //  // Question 3: //
-
 //  let thirdFruit = fruits[3];
-
 //  // Question 4: //
-
 //  numbers[2]=25
-
- // Question 5: //
-
+// Question 5: //
 //  fruits.push("grape")
-
- // Question 6: //
-
+// Question 6: //
 // let lastFruit=fruits.pop();
-
+// console.log(lastFruit)
 // Question 7: //
-
 // let firstFruit =fruits.shift()
-
 // Question 8: //
-
 // fruits.unshift("kiwi")
-
 // Question 9: //
-
 // fruits.splice(1,2) 
-
 // Question 10: //
-
 // fruits.splice(2,0,"pineapple","pear")
-
 // Question 11: //
-
 // let citrusFruits=fruits.slice(0,2)
-
 // Question 12: //
-
 // let LastTwoFruits = fruits.slice(2)
-
 // PART 1:BASIC ARRAYS-PRODUCT Inventory //
-
 // type Product={
 //     name:string,
 //     price:number,
@@ -60,7 +35,6 @@
 //         colorOptions:string[],
 //     },
 // }
-
 // let products:Product[] =[{
 //     name:"sneakers",
 //     price:5000,
@@ -116,14 +90,11 @@
 //     }
 // }
 // changeColor('sneakers','black')
-
 // Multi-Dimensional Arrays and Tuples-student Grades //
-
 // type Student ={
 //     name:string,
 //     grades:number[],   
 // }
-
 // let students:Student[]=[{
 //     name:"Ahmed",
 //     grades:[45,50,97,66],
@@ -137,7 +108,6 @@
 //     grades:[75,82,90,55],
 // }
 // ]
-
 // function calculateAverageGrade(Name:string){
 //             if(students.some(object=>object.name===Name)){
 //                 students.forEach((Object)=>{
@@ -153,13 +123,9 @@
 //             }else{
 //                 console.log(`Student of Name '${Name}'does not exist.`)
 //             }
-           
 // }
-
 // calculateAverageGrade("Laraib")
-
 // ARRAY WITH TYPES AND INDEXING-EMPLOYEE SALARIES //
-
 // type Employee={
 //     name:string,
 //     hoursWorked:number,
@@ -182,7 +148,6 @@
 //     hourlyRate:31,
 //     salary:25*31,
 // }]
-
 // function calculateSalary(Name:string){
 //     let Namee = Name.toLowerCase()
 //     if(employees.some(object=>object.name===Namee)){
@@ -203,6 +168,4 @@
 // }
 // }
 // calculateSalary("mikasa")
-
-
-                                             // ✧˖°ʚ🍓ɞ♡  THE END :D ɞ♡🍓✧˖°ʚ// 
+// ✧˖°ʚ🍓ɞ♡  THE END :D ɞ♡🍓✧˖°ʚ// 
